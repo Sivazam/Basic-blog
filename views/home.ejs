@@ -1,0 +1,29 @@
+<%- include("partials/header") -%>
+<br>
+<form action = "/com" method="post">
+<button class = "comp" onclick="/compose">compose</button>
+</form><br>
+<h1> Home </h1><br>
+
+
+<p> <%= c1 %> </p>
+
+
+<% posts.forEach(function(post) { %>
+
+
+<h2><%=post.title%></h2>
+
+<p>
+<%=post.content.substring(0,100) + "..."  %>
+<a href="/posts/<%= post.id %>">Read more </a>
+</p>
+
+
+<% }) %>
+
+
+
+
+<%- include("partials/footer") -%>
+
